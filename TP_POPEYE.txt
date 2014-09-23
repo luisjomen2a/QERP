@@ -1,0 +1,42 @@
+L’entreprise POPEYE se trouve à Niouorque (64) et comprend 10 employés : 1 comptable (Olive), 3
+commerciaux (dont le PDG Popeye), 1 acheteur et 5 employés de production. Les clients sont la grande distribution et la
+clientèle locale.
+Les étapes principales sont :
+- le hachage des épinards où l’on ajoute pour 100g d'épinard du sel 0,0225g, de l’ail 0,1g
+et des épices 0,02g.
+- la mise en boîte surgelée.
+2 produits:
+- épinard en boite surgelée
+- brandade de morue avec épinards (il faut 100g de brandade à ajouter à la
+fin du hachage).
+Les 2 produits sont à consommer dans l’année de la production (surgelé).
+Au 1/1/60 mon stock d' épinard en boite est de 23 000 et de 5 000 pour la brandade(fabrication 1/60). Le stock
+d’ingrédients est de 5kg pour chaque, 500kg pour les épinards, 100kg pour la brandade.
+Mes prévisions de vente (basées sur mes historiques) sont de
+18000 par mois et de 4000 pour la brandade. La saisonnalité est plus forte sur les
+mois d’été impliquant une hausse des ventes de 20%.
+Au niveau des achats, les matières premières se commandent par
+5kg, avec un délai d’une semaine.
+A ce jour, notre carnet de commande (client) est constitué de 2
+commandes :
+- pour le 5/1/60 2000 épinards en boite
+- pour le 10/1/60 500 Brandade.
+Notre production journalière est de 1075 boite ( quelque soit le produit) surgelé pour 7h de
+travail. Nous perdons 3 heures à chaque changement de série.
+Nous travaillons en 1 équipe du lundi au vendredi.
+Le conditionnement à l’expédition est par caisse de 150, 6 caisses par palettes Euro.
+1. Si mes prévisions sont exactes, Quand dois-je passer
+commande de matières premières ? Lesquelles et à quelles
+dates ?
+2. Aurais je des problèmes de capacité de production ? Si
+oui quand ?
+3. Quel serait mon stock au 31.12.60 ? Le stock moyen sur
+l’année ?
+4. Refaire les questions 1,2,3 si mes prévisions augmentent
+de 20%.
+5. Refaire les questions 1,2,3 si mes prévisions diminuent
+de 20%.
+6. Auriez vous des conseils sur la gestion de cette
+entreprise ?
+7. Cette entreprise aurait-elle besoin d’un ERP ?
+8. Comment calculer le prix de revient d’une boite surgelée ?
