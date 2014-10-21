@@ -19,6 +19,12 @@ int productionParHeure = 1075/7;
 int jourSemaine=1, jourMois=1, mois=1, semaine=1;
 
 // boolMorue : 1-> production de Brandade, 0-> production d'epinard
+
+/***
+
+Fon
+
+***/
 void productionJournaliere(int heure, float productivite, int boolMorue)
 {
 	int boiteAProduire = productivite*productionParHeure*heure;
@@ -78,6 +84,36 @@ void verifieStock()
 	}
 }
 
+void venteProduits(int moisCourant){
+
+
+	
+	if(moisCourant >= 6 && moisCourant <= 8){
+		
+		stockBoite -= 21600;
+		stockBrandade -= 4800;
+
+	}
+	else{
+
+		stockBoite -= 18000;
+		stockBrandade -= 4000;
+
+	}
+
+	if(stockBoite <= 0){
+
+		printf("Attention! Vous avez trop vendu! Vos stock de Boite d'épinards sont maintenant négatifs\n Mois : %d",moisCourant);
+
+	}
+
+	if(stockBrandade <= 0){
+
+		printf("Attention! Vous avez trop vendu! Vos stocks de Brandade de Morue sont maintenant négatifs\n Mois : %d",moisCourant);
+
+	}
+}
+
 void simulation(float productivite)
 {
 
@@ -89,7 +125,10 @@ void simulation(float productivite)
 			productionJournaliere(4, productivite, semaine%2);
 		else
 			productionJournaliere(7, productivite, semaine%2);
-		
+
+
+		verifieStock();	
+	
 
 		// avance dans le temps
 		jourSemaine ++;
@@ -104,6 +143,9 @@ void simulation(float productivite)
 		{
 			jourMois=0;
 			mois++;
+
+			//Ventes des produits
+			venteProduits(mois);
 		}
 	}
 }
@@ -114,7 +156,6 @@ void simulation(float productivite)
 
 int main(int argc, char** argv){
 
-	printf("res %f kg",utilisationParJour(100.0,1075.0));
 
 
 		
