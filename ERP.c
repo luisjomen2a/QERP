@@ -32,7 +32,7 @@ void productionJournaliere(int heure, float productivite, int boolMorue)
 	epinard-=boiteAProduire*100;
 	sel-=boiteAProduire*0.0225;
 	ail-=boiteAProduire*0.1;
-	epices-=boiteAProduire*100;
+	epices-=boiteAProduire*0.02;
 
 	if(boolMorue)
 	{
@@ -61,6 +61,7 @@ void verifieStock()
 	{
 		printf("commander 500kg d'epinard le %d / %d\n", jourCommande, moisCommande);
 		epinard+=500000;
+		
 	}
 	if(sel<=0)
 	{
@@ -79,8 +80,8 @@ void verifieStock()
 	}
 	if(morue<=0)
 	{
-		printf("commander 250kg de brandade de morue le %d / %d\n", jourCommande, moisCommande);
-		epices+=250000;
+		printf("commander 500kg de brandade de morue le %d / %d\n", jourCommande, moisCommande);
+		morue+=500000;
 	}
 }
 
@@ -117,7 +118,7 @@ void venteProduits(int moisCourant){
 void simulation(float productivite)
 {
 
-	while(jourMois<=30 && mois!=12)
+	while(jourMois<=30 && mois<=12)
 	{
 
 		// production
@@ -133,20 +134,22 @@ void simulation(float productivite)
 		// avance dans le temps
 		jourSemaine ++;
 		jourMois ++;
-		if(jourSemaine==5)
+		if(jourSemaine==6)
 		{
 			jourMois +=2;
-			jourSemaine=0;
+			
+			jourSemaine=1;
 			semaine++;
 		}
-		if(jourMois==30)
+		if(jourMois>30)
 		{
-			jourMois=0;
+			jourMois-=30; //JoursMois = 32
 			mois++;
 
 			//Ventes des produits
 			venteProduits(mois);
 		}
+
 	}
 }
 
@@ -157,7 +160,7 @@ void simulation(float productivite)
 int main(int argc, char** argv){
 
 
-
+	simulation(1.0);	
 		
 
 	return 0;
