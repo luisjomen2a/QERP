@@ -16,8 +16,6 @@ int stockBrandade=5000;
 
 int productionParHeure = 1075/7;
 
-int jourSemaine=1, jourMois=1, mois=1, semaine=1;
-
 // boolMorue : 1-> production de Brandade, 0-> production d'epinard
 void productionJournaliere(int heure, float productivite, int boolMorue)
 {
@@ -41,45 +39,10 @@ void productionJournaliere(int heure, float productivite, int boolMorue)
 	}	
 } 
 
-//Q1
-void verifieStock()
-{
-	int jourCommande = jourMois-8;
-	int moisCommande = mois;
-	if(jourCommande<=0)
-	{
-		moisCommande--;
-		jourCommande=30+jourCommande;
-	}
-	if(epinard<=0)
-	{
-		printf("commander 500kg d'epinard le %d / %d\n", jourCommande, moisCommande);
-		epinard+=500000;
-	}
-	if(sel<=0)
-	{
-		printf("commander 5kg de sel le %d / %d\n", jourCommande, moisCommande);
-		sel+=5000;
-	}
-	if(epices<=0)
-	{
-		printf("commander 5kg d'epices le %d / %d\n", jourCommande, moisCommande);
-		epices+=5000;
-	}
-	if(ail<=0)
-	{
-		printf("commander 5kg d'ail le %d / %d\n", jourCommande, moisCommande);
-		ail+=5000;
-	}
-	if(morue<=0)
-	{
-		printf("commander 250kg de brandade de morue le %d / %d\n", jourCommande, moisCommande);
-		epices+=250000;
-	}
-}
 
 void simulation(float productivite)
 {
+	int jourSemaine=1, jourMois=1, mois=1, semaine=1;
 
 	while(jourMois<=30 && mois!=12)
 	{
